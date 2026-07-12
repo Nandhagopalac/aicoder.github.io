@@ -3,18 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Resources</title>
+    <title>Learning Hub</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="container">
-      <section class="card">
-        <h1>AI</h1>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Personal Learning Library</p>
+        <h1>Organize your AI and SQL learning in one elegant place.</h1>
         <p>
-          <a href="https://outcomeschool.com/" target="_blank" rel="noopener noreferrer">
-            Outcome School | Get a High-Paying Tech Job
-          </a>
+          Create new topic folders over time and keep everything easy to browse,
+          discover, and revisit.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#topics">Explore topics</a>
+          <a class="btn btn-secondary" href="https://outcomeschool.com/" target="_blank" rel="noopener noreferrer">
+            Featured resource
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="topics">
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Main categories</p>
+          <h2>Start learning by topic</h2>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>AI</h3>
+            <p>Notes, ideas, and study pages for agents, loops, prompts, and workflows.</p>
+            <ul class="topic-list">
+              <li><a href="AI/">AI hub</a></li>
+              <li><a href="AI/Agents/">Agents</a></li>
+              <li><a href="AI/Loop/">Loop</a></li>
+            </ul>
+            <a class="text-link" href="AI/">Open AI section →</a>
+          </article>
+
+          <article class="card">
+            <h3>SQL</h3>
+            <p>Organized lessons for SQL basics, joins, window functions, and more.</p>
+            <ul class="topic-list">
+              <li><a href="SQL/">SQL hub</a></li>
+              <li><a href="SQL/Basics/">Basics</a></li>
+              <li><a href="SQL/Joins/">Joins</a></li>
+            </ul>
+            <a class="text-link" href="SQL/">Open SQL section →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="section-heading">
+          <p class="eyebrow">Structure</p>
+          <h2>A simple pattern for 100+ folders</h2>
+        </div>
+        <div class="stack">
+          <div class="panel">
+            <h3>Folder style</h3>
+            <pre>main-folder/
+  AI/
+    Agents/
+    Loop/
+    Prompts/
+  SQL/
+    Basics/
+    Joins/
+    Window Functions/</pre>
+          </div>
+          <div class="panel">
+            <h3>Why it works</h3>
+            <ul class="topic-list">
+              <li>Clear main categories</li>
+              <li>Nested topics stay easy to find</li>
+              <li>More pages can be added without reworking the layout</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
   </body>
