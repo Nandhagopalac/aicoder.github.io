@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Agent Loop</title>
     <link rel="stylesheet" href="../../styles.css" />
+    <script src="../../script.js" defer></script>
   </head>
   <body>
     <div class="site-shell">
@@ -12,12 +13,32 @@
         <div class="brand">Learning</div>
         <nav>
           <a href="../../index.html">Home</a>
-          <a href="../../AI/">AI</a>
-          <a href="../../AI/Agents/">AI Agents</a>
-          <a href="../../AI/Loop/" class="active">AI Loop</a>
-          <a href="../../SQL/">SQL</a>
-          <a href="../../SQL/Basics/">SQL Basics</a>
-          <a href="../../SQL/Joins/">SQL Joins</a>
+
+          <div class="nav-group is-open">
+            <button class="nav-toggle" aria-expanded="true">AI</button>
+            <div class="submenu">
+              <a href="../../AI/">AI Hub</a>
+              <a href="../../AI/Agents/">AI Agents</a>
+              <a href="../../AI/Loop/" class="active">AI Loop</a>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <button class="nav-toggle" aria-expanded="false">SQL</button>
+            <div class="submenu">
+              <a href="../../SQL/">SQL Hub</a>
+              <a href="../../SQL/Basics/">SQL Basics</a>
+              <a href="../../SQL/Joins/">SQL Joins</a>
+            </div>
+          </div>
+
+          <div class="nav-group">
+            <button class="nav-toggle" aria-expanded="false">Python</button>
+            <div class="submenu">
+              <a href="../../Python/">Python Hub</a>
+              <a href="../../Python/Basics/">Python Basics</a>
+            </div>
+          </div>
         </nav>
       </aside>
 
@@ -45,17 +66,17 @@
 
           <div class="resource-grid">
             <article class="resource-card">
-              <span class="pill">Article</span>
+              <span class="pill">Page</span>
               <h3>AI Agent Loop</h3>
-              <p>Learn how agent systems can move through observation, reasoning, and action in a repeatable loop.</p>
-              <a class="btn btn-secondary" href="https://outcomeschool.com/blog/ai-agent-loop" target="_blank" rel="noopener noreferrer">Open article</a>
+              <p>Read the article and learn how agent systems progress through observation, reasoning, and action.</p>
+              <a class="btn btn-secondary" href="https://outcomeschool.com/blog/ai-agent-loop" target="_blank" rel="noopener noreferrer">Open page</a>
             </article>
 
             <article class="resource-card">
-              <span class="pill">Concept</span>
-              <h3>How AI Agents Communicate</h3>
-              <p>Explore how multiple agents share context, coordinate tasks, and work together effectively.</p>
-              <a class="btn btn-secondary" href="https://outcomeschool.com/blog/how-ai-agents-communicate" target="_blank" rel="noopener noreferrer">Open article</a>
+              <span class="pill">Video</span>
+              <h3>AI Agent Loop Basics</h3>
+              <p>Watch a video to see agent loop concepts in practice and explore related examples.</p>
+              <a class="btn btn-secondary" href="https://www.youtube.com/results?search_query=ai+agent+loop" target="_blank" rel="noopener noreferrer">Watch video</a>
             </article>
           </div>
         </section>
