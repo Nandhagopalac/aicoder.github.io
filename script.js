@@ -1,68 +1,27 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const groups = Array.from(document.querySelectorAll('.nav-group'));
-  const toggleButtons = Array.from(document.querySelectorAll('.nav-toggle'));
-  const currentPath = window.location.pathname;
-
-  const normalize = (value) => {
-    let path = value || '/';
-    if (!path.startsWith('/')) {
-      path = `/${path}`;
-    }
-    if (path.endsWith('/index.html')) {
-      path = path.replace(/\/index\.html$/, '/');
-    }
-    if (path !== '/' && path.endsWith('/')) {
-      path = path.slice(0, -1);
-    }
-    return path;
-  };
-
-  const resolveHref = (link) => {
-    try {
-      return new URL(link.getAttribute('href'), window.location.href).pathname;
-    } catch {
-      return '';
-    }
-  };
-
-  groups.forEach((group) => {
-    const toggle = group.querySelector('.nav-toggle');
-    const links = Array.from(group.querySelectorAll('.submenu a'));
-    const activeLink = links.find((link) => normalize(resolveHref(link)) === normalize(currentPath));
-
-    if (activeLink) {
-      group.classList.add('is-open');
-      toggle.setAttribute('aria-expanded', 'true');
+document.addEventListener('DOMContentLoaded',()=>{
+  const sidebar=document.getElementById('sidebar');
+  if(!sidebar)return;
+  let h='<div class="brand">'+NAV.brand+'</div><nav><a href="/">Home</a>';
+  NAV.groups.forEach(g=>{
+    h+='<div class="nav-group"><button class="nav-toggle" aria-expanded="false">'+g.label+'</button><div class="submenu">';
+    g.items.forEach(i=>{h+='<a href="'+i.href+'">'+i.text+'</a>'});
+    h+='</div></div>'
+  });
+  h+='</nav>';
+  sidebar.innerHTML=h;
+  const p=(location.pathname.replace(/\/index\.html$/,'/').replace(/\/+$/,'')||'/').toLowerCase();
+  document.querySelectorAll('.sidebar a').forEach(a=>{
+    const u=(a.getAttribute('href').replace(/\/+$/,'')||'/').toLowerCase();
+    if(u===p){
+      a.classList.add('active');
+      const g=a.closest('.nav-group');
+      if(g){g.classList.add('is-open');g.querySelector('.nav-toggle').setAttribute('aria-expanded','true')}
     }
   });
-
-  document.querySelectorAll('.sidebar a').forEach((link) => {
-    if (normalize(resolveHref(link)) === normalize(currentPath)) {
-      link.classList.add('active');
-      const group = link.closest('.nav-group');
-      if (group) {
-        group.classList.add('is-open');
-        const toggle = group.querySelector('.nav-toggle');
-        toggle.setAttribute('aria-expanded', 'true');
-      }
-    }
-  });
-
-  toggleButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const isOpen = button.getAttribute('aria-expanded') === 'true';
-
-      groups.forEach((group) => {
-        const otherToggle = group.querySelector('.nav-toggle');
-        group.classList.remove('is-open');
-        otherToggle.setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        const group = button.closest('.nav-group');
-        group.classList.add('is-open');
-        button.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
+  document.querySelectorAll('.nav-toggle').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.nav-group').forEach(g=>{g.classList.remove('is-open');g.querySelector('.nav-toggle').setAttribute('aria-expanded','false')});
+      if(b.getAttribute('aria-expanded')!=='true'){const g=b.closest('.nav-group');g.classList.add('is-open');b.setAttribute('aria-expanded','true')}
+    })
+  })
 });

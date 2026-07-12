@@ -1,73 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Agents</title>
-    <link rel="stylesheet" href="../../styles.css" />
-    <script src="../../script.js" defer></script>
-  </head>
-  <body>
-    <div class="site-shell">
-      <aside class="sidebar">
-        <div class="brand">Learning</div>
-        <nav>
-          <a href="../../index.html">Home</a>
-
-          <div class="nav-group is-open">
-            <button class="nav-toggle" aria-expanded="true">AI</button>
-            <div class="submenu">
-              <a href="../../AI/">AI Hub</a>
-              <a href="../../AI/Agents/" class="active">AI Agents</a>
-              <a href="../../AI/Loop/">AI Loop</a>
-            </div>
-          </div>
-
-          <div class="nav-group">
-            <button class="nav-toggle" aria-expanded="false">SQL</button>
-            <div class="submenu">
-              <a href="../../SQL/">SQL Hub</a>
-              <a href="../../SQL/Basics/">SQL Basics</a>
-              <a href="../../SQL/Joins/">SQL Joins</a>
-            </div>
-          </div>
-
-          <div class="nav-group">
-            <button class="nav-toggle" aria-expanded="false">Python</button>
-            <div class="submenu">
-              <a href="../../Python/">Python Hub</a>
-              <a href="../../Python/Basics/">Python Basics</a>
-            </div>
-          </div>
-        </nav>
-      </aside>
-
-      <main class="content">
-        <header class="hero">
-          <div class="hero-content">
-            <p class="eyebrow">AI • Agents</p>
-            <h1>AI Agents</h1>
-          </div>
-        </header>
-
-        <section class="section">
-          <div class="resource-grid">
-            <article class="resource-card">
-              <span class="pill">Page</span>
-              <h3>How AI Agents Communicate</h3>
-              <p>Read the article and explore how agents share context and coordinate tasks.</p>
-              <a class="btn btn-secondary" href="https://outcomeschool.com/blog/how-ai-agents-communicate" target="_blank" rel="noopener noreferrer">Open page</a>
-            </article>
-
-            <article class="resource-card">
-              <span class="pill">Video</span>
-              <h3>AI Agents Explained</h3>
-              <p>Watch a video walkthrough on AI agents and communication patterns.</p>
-              <a class="btn btn-secondary" href="https://www.youtube.com/results?search_query=how+ai+agents+communicate" target="_blank" rel="noopener noreferrer">Watch video</a>
-            </article>
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Agents</title>
+<meta name="description" content="Learn about AI agents and communication patterns" />
+<meta property="og:title" content="AI Agents" />
+<meta property="og:description" content="Learn about AI agents and communication patterns" />
+<meta name="twitter:card" content="summary" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>:root{--bg:#f5f7fb;--card:#fff;--text:#14213d;--muted:#64748b;--accent:#2563eb;--accent-dark:#0f172a;--border:#e2e8f0}*{box-sizing:border-box}body{margin:0;font-family:"Inter","Segoe UI",Arial,sans-serif;color:var(--text);background:radial-gradient(circle at top left,#f8fbff 0%,var(--bg) 45%,#eef4ff 100%);line-height:1.7}.site-shell{display:flex;min-height:100vh}.sidebar{width:240px;background:var(--accent-dark);color:#fff;padding:2rem 1.2rem;flex-shrink:0}.sidebar .brand{font-size:1.3rem;font-weight:700;margin-bottom:2rem}.sidebar nav{display:flex;flex-direction:column;gap:.5rem}.nav-group{display:flex;flex-direction:column}.nav-toggle{background:transparent;border:0;color:#dbeafe;padding:.65rem .7rem;border-radius:10px;font:inherit;font-weight:700;text-align:left;cursor:pointer}.nav-toggle:hover{background:rgba(255,255,255,.12)}.submenu{display:none;flex-direction:column;gap:.2rem;margin:.25rem 0 .25rem .6rem}.nav-group.is-open .submenu{display:flex}.sidebar a{color:#dbeafe;padding:.55rem .7rem;border-radius:10px;font-weight:600;display:block}.sidebar a:hover,.sidebar a.active{background:rgba(255,255,255,.14);text-decoration:none}.content{flex:1;background:#f8fafc}.hero{padding:4rem 1.5rem 2.4rem;background:linear-gradient(135deg,var(--accent-dark) 0%,#1d4ed8 100%);color:#fff}.hero-content{max-width:900px;margin:0 auto}.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:.78rem;font-weight:700;opacity:.85;margin-bottom:.7rem}h1,h2,h3{margin-top:0;line-height:1.2}.hero h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}.hero p{max-width:700px;font-size:1.05rem;opacity:.95}.section{max-width:1100px;margin:0 auto;padding:2rem 1.5rem 3rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}.card,.resource-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.2rem;box-shadow:0 8px 24px rgba(15,23,42,.05)}.topic-list{padding-left:1.1rem;margin:.8rem 0 1rem}.topic-list li{margin-bottom:.35rem}a{color:var(--accent);text-decoration:none;font-weight:600}a:hover{text-decoration:underline}.btn{display:inline-block;padding:.8rem 1.15rem;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-1px)}.btn-secondary{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.25)}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:1rem}.pill{display:inline-block;padding:.35rem .7rem;border-radius:999px;background:#eff6ff;color:var(--accent);font-size:.8rem;font-weight:700;margin-bottom:.8rem}.section-heading{margin-bottom:1.25rem}.section-heading p{color:var(--muted);margin:.25rem 0 0}</style>
+<script src="/nav.js" defer></script>
+<script src="/script.js" defer></script>
+</head>
+<body>
+<div class="site-shell">
+<aside class="sidebar" id="sidebar"></aside>
+<main class="content">
+<header class="hero">
+<div class="hero-content">
+<p class="eyebrow">AI &bull; Agents</p>
+<h1>AI Agents</h1>
+</div>
+</header>
+<section class="section">
+<div class="resource-grid">
+<article class="resource-card">
+<span class="pill">Page</span>
+<h3>How AI Agents Communicate</h3>
+<p>Read the article and explore how agents share context and coordinate tasks.</p>
+<a class="btn btn-secondary" href="https://outcomeschool.com/blog/how-ai-agents-communicate" target="_blank" rel="noopener noreferrer">Open page</a>
+</article>
+<article class="resource-card">
+<span class="pill">Video</span>
+<h3>AI Agents Explained</h3>
+<p>Watch a video walkthrough on AI agents and communication patterns.</p>
+<a class="btn btn-secondary" href="https://www.youtube.com/results?search_query=how+ai+agents+communicate" target="_blank" rel="noopener noreferrer">Watch video</a>
+</article>
+</div>
+</section>
+</main>
+</div>
+</body>
 </html>
